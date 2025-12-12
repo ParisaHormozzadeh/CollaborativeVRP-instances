@@ -2,7 +2,7 @@
 
 This repository contains the synthetic benchmark instances used in the computational experiments of the paper:
 
-**[Paper Title]**  
+**[Carrier Collaborative Vehicle Routing Problem with Shared Customer Demands and Vehicle Capacities]**  
 (submitted to *Computers & Operations Research*).
 
 The instances are provided in plain text format (`.txt`) and were generated specifically for this study.
@@ -51,18 +51,18 @@ where `e_i` denotes the number of exclusive customers assigned to carrier `i`.
 
 ---
 
-### 4. Indices of exclusive customers
-For each carrier with exclusive customers, a line lists the indices of those customers.
+### 4. Indices of retained customers
+For each carrier with retained customers, a line lists the indices of those customers.
 
 ---
 
-### 5. Number of indivisible customer sets per carrier
+### 5. Number of indivisible group customer sets per carrier
 The next line contains `C` integers:
-where `s_i` is the number of indivisible customer sets for carrier `i`.
+where `s_i` is the number of indivisible group customer sets for carrier `i`.
 
 ---
 
-### 6. Definition of indivisible customer sets
+### 6. Definition of indivisible group customer sets
 For each indivisible set, a line is provided in the following format:
 where:
 - `k` is the number of customers in the set,
