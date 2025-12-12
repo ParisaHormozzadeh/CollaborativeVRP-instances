@@ -18,72 +18,54 @@ where:
 - `C` is the number of carriers,
 - `N` is the total number of customers,
 - `V` is the total number of vehicles,
-- `S` is the seed index used to generate the instance.
-
-For example:
-denotes an instance with:
-- 2 carriers,
-- 15 customers in total,
-- 2 vehicles,
-- seed number 3.
-
+- `T` is the seed index used to generate the instance.
 ---
 
 ## Instance file structure
 
 Each instance file follows the structure described below.
 
-### 1. Number of carriers
-The first line contains a single integer:
+### 1. Number of carriers (|C|)
 representing the total number of carriers.
 
 ---
 
-### 2. Number of customers per carrier
-The second line contains `C` integers:
-where `n_i` is the number of customers associated with carrier `i`.
+### 2. Number of customers per carrier (|N_c| , N_c ⊆ N )
+where `N_c` is the number of customers associated with carrier `c`.
 
 ---
 
-### 3. Number of exclusive customers per carrier
-The next line contains `C` integers:
-where `e_i` denotes the number of exclusive customers assigned to carrier `i`.
+### 3. Number of retained customers per carrier (|N_c^r|)
+where `N_c^r` denotes the number of retained customers assigned to carrier `c`.
 
 ---
 
-### 4. Indices of retained customers
+### 4. Indices of retained customers (N_c^r)
 For each carrier with retained customers, a line lists the indices of those customers.
 
 ---
 
-### 5. Number of indivisible group customer sets per carrier
-The next line contains `C` integers:
-where `s_i` is the number of indivisible group customer sets for carrier `i`.
+### 5. Number of indivisible group customer sets per carrier (S_g^c⊆N_c)
+where `g` is the number of indivisible group customer sets for carrier `c`.
 
 ---
 
-### 6. Definition of indivisible group customer sets
-For each indivisible set, a line is provided in the following format:
-where:
-- `k` is the number of customers in the set,
-- `c_j` are the indices of customers belonging to that indivisible set.
+### 6. Definition of indivisible group customer sets 
+ the indices of customers belonging to that indivisible set.
 
 ---
 
-### 7. Number of vehicles per carrier
-The next line contains `C` integers:
-where `v_i` denotes the number of vehicles available for carrier `i`.
+### 7. Number of vehicles per carrier (V_c)
+where `V_c` denotes the number of vehicles available for carrier `c`.
 
 ---
 
-### 8. Vehicle capacity
-The next line contains a single integer:
+### 8. Vehicle capacity (Q)
 representing the capacity of each vehicle.
 
 ---
 
 ### 9. Carrier depot coordinates
-The following `C` lines contain two columns:
 representing the geographical coordinates (x, y) of the depot of each carrier.
 
 ---
@@ -91,8 +73,8 @@ representing the geographical coordinates (x, y) of the depot of each carrier.
 ### 10. Customer data
 The remaining lines describe the customers. Each line contains three values:
 where:
-- `x_j` and `y_j` are the geographical coordinates of customer `j`,
-- `d_j` is the demand of customer `j`.
+- `x_i` and `y_i` are the geographical coordinates of customer `i`,
+- `q_i` is the demand of customer `i`.
 
 ---
 
