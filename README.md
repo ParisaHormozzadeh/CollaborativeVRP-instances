@@ -9,7 +9,6 @@ The instances are provided in plain text format (`.txt`) and were generated spec
 
 ---
 
-## File naming convention
 
 Each instance file is named as:
 
