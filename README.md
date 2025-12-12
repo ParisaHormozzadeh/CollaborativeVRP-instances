@@ -1,4 +1,4 @@
-# Synthetic benchmark instances for multi-carrier vehicle routing problem
+# Genrated instances for carrier collaborative VRP
 
 This repository contains the synthetic benchmark instances used in the computational experiments of the paper:
 
